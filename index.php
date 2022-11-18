@@ -24,7 +24,8 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use App\Arr, App\AvgHelper, App\Product, App\SumHelper, App\Cart;
+use App\City, App\Compare, App\Employee, App\Employee6, App\Employee13, App\Employee19, App\EmployeesCollection,
+    App\EmployeesCollectionMod, App\Student7, App\Student19, App\User12, App\UsersCollection;
 
 echo "<pre>",
 "
@@ -33,9 +34,10 @@ echo "<pre>",
 ",
 "</pre>";
 
-//create an instance of the class
-
-
+//create an instance of the class Compare
+$obj1 = new Compare("777");
+$obj2 = new Compare(777);
+echo Compare::compare1($obj1,$obj2);
 
 echo "<hr />";
 echo "<pre>",
@@ -45,14 +47,18 @@ echo "<pre>",
 "</pre>";
 
 //create an instance of the class
-
-
+$obj1 = new Compare("888");
+$obj2 = new Compare(888);
+echo Compare::compare2($obj1,$obj2);
+echo "<br />";
+$obj3 = $obj1;
+echo Compare::compare2($obj1,$obj3);
 
 echo "<hr />";
 
 echo "<pre>",
 "
-     3.	Зробіть функцію compare3, яка параметром прийматиме два об'єкти та порівнюватиме їх.
+    3.	Зробіть функцію compare3, яка параметром прийматиме два об'єкти та порівнюватиме їх.
     Функція повинна повертати 1, якщо передані змінні посилаються на той самий об'єкт.
     Функція повинна повертати 0, якщо об'єкти різні, але одного й того ж класу і з тими самими властивостями та їх значеннями.
     Функція повинна повертати -1 інакше.
@@ -60,9 +66,15 @@ echo "<pre>",
 "</pre>";
 
 //create an instance of the class
-
-
-
+$obj1 = new Compare("888");
+$obj2 = new Compare(888);
+echo Compare::compare3($obj1,$obj2);
+echo "<br />";
+$obj3 = $obj1;
+echo Compare::compare3($obj1,$obj3);
+echo "<br />";
+$obj4 = "888";
+echo Compare::compare3($obj1,$obj4);
 echo "<hr />";
 
 echo "<pre>",
