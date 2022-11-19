@@ -13,7 +13,7 @@ class EmployeesCollectionMod
             $this->employees[] = $newEmployee;
         }
     }
-    
+
     public function get()
     {
         return $this->employees;

@@ -106,13 +106,54 @@ echo "<pre>",
     8.	Створіть по 3 об'єкти кожного класу і довільно запишіть їх у масив $ arr.
     9.	Переберіть циклом масив $ arr та виведіть на екран стовпець імен усіх працівників.
     10.	Аналогічно виведіть на екран стовпець імен усіх студентів.
-    11.	Переберіть циклом масив $ arr та за його допомогою знайдіть суму зарплат працівників та суму стипендій студентів. Після циклу виведіть ці два номери на екран.
-
+    11.	Переберіть циклом масив $ arr та за його допомогою знайдіть суму зарплат працівників та суму стипендій студентів.
+     Після циклу виведіть ці два номери на екран.
 ",
 "</pre>";
 
 //create an instance of the class
+$employee1 = new Employee6("Ivan", 3000);
+$employee2 = new Employee6("Oleg", 2800);
+$employee3 = new Employee6("Igor", 3400);
+$student1 = new Student7("Stepan", 800);
+$student2 = new Student7("Ruslan", 700);
+$student3 = new Student7("Platon", 900);
+$arr = [$employee1, $employee2, $employee3, $student1, $student2, $student3];
 
+echo "Employee's name : "."<br />";
+foreach ($arr as $item)
+{
+    if ($item instanceof  Employee6)
+    {
+        echo $item->name . "<br />";
+    }
+}
+
+echo "Student's name : "."<br />";
+foreach ($arr as $item)
+{
+    if ($item instanceof  Student7)
+    {
+        echo $item->name . "<br />";
+    }
+}
+
+$totalSalary = 0;
+$totalScholarship = 0;
+foreach ($arr as $item)
+{
+    if ($item instanceof  Employee6)
+    {
+        $totalSalary += $item->salary;
+    }
+    if ($item instanceof  Student7)
+    {
+        $totalScholarship += $item->scholarship;
+    }
+}
+
+echo "Employee's salary : {$totalSalary}"."<br />";
+echo "Student's scholarship : {$totalScholarship}"."<br />";
 
 echo "<hr />";
 echo "<pre>",
@@ -127,13 +168,44 @@ echo "<pre>",
     які не належать до класу User або нащадка цього класу.
     18.	Переберіть циклом масив $ arr і виведіть на екран стовпець властивостей name тих об'єктів, 
     які належать саме класу User, тобто класу City і класу Employee.
-
 ",
 "</pre>";
 
 //create an instance of the class
-
-
+$user1 = new User12("Karl", "Dor");
+$user2 = new User12("Ignat", "Pat");
+$user3 = new User12("Vlad", "Ram");
+$employee1 = new Employee13("Stepan", "Lee", 2500);
+$employee2 = new Employee13("Roman", "Cos", 2800);
+$employee3 = new Employee13("Potap", "Bap", 2700);
+$city1 = new City("London", 9500000);
+$city2 = new City("Paris", 11100000);
+$city3 = new City("Berlin", 3570000);
+$arr = [$user1, $user2, $user3, $employee1, $employee2, $employee3, $city1, $city2, $city3];
+echo "User's name : "."<br />";
+foreach ($arr as $item)
+{
+    if ($item instanceof  User12)
+    {
+        echo $item->name . "<br />";
+    }
+}
+echo "No User's name : "."<br />";
+foreach ($arr as $item)
+{
+    if (!$item instanceof  User12)
+    {
+        echo $item->name . "<br />";
+    }
+}
+echo "Strong User's name : "."<br />";
+foreach ($arr as $item)
+{
+    if ((!$item instanceof  Employee13) && (!$item instanceof  City))
+    {
+        echo $item->name . "<br />";
+    }
+}
 echo "<hr />";
 
 echo "<pre>",
