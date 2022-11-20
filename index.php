@@ -147,8 +147,8 @@ echo "<hr />";
 
 echo "<pre>",
 "
-    6.	Зробіть клас Employee з громадськими властивостями name (ім'я) та salary (зарплата).
-    7.	Зробіть клас Student з громадськими властивостями name (ім'я) та scholarship (стипендія).
+    6.	Зробіть клас Employee6 з громадськими властивостями name (ім'я) та salary (зарплата).
+    7.	Зробіть клас Student7 з громадськими властивостями name (ім'я) та scholarship (стипендія).
     8.	Створіть по 3 об'єкти кожного класу і довільно запишіть їх у масив $ arr.
     9.	Переберіть циклом масив $ arr та виведіть на екран стовпець імен усіх працівників.
     10.	Аналогічно виведіть на екран стовпець імен усіх студентів.
@@ -157,17 +157,17 @@ echo "<pre>",
 ",
 "</pre>";
 
-//create an instance of the class Employee
+//create an instance of the class Employee6
 $employee1 = new Employee6("Ivan", 3000);
 $employee2 = new Employee6("Oleg", 2800);
 $employee3 = new Employee6("Igor", 3400);
-//create an instance of the class Student
+//create an instance of the class Student7
 $student1 = new Student7("Stepan", 800);
 $student2 = new Student7("Ruslan", 700);
 $student3 = new Student7("Platon", 900);
 $arr = [$employee1, $employee2, $employee3, $student1, $student2, $student3];
 
-echo "Employee's name : " . "<br />";
+echo "Names of employees : " . "<br />";
 foreach ($arr as $item) {
     if ($item instanceof Employee6) {
         echo $item->name . "<br />";
@@ -175,7 +175,7 @@ foreach ($arr as $item) {
 }
 echo "<br />";
 
-echo "Student's name : " . "<br />";
+echo "Names of students : " . "<br />";
 foreach ($arr as $item) {
     if ($item instanceof Student7) {
         echo $item->name . "<br />";
@@ -194,30 +194,30 @@ foreach ($arr as $item) {
     }
 }
 
-echo "Employee's salary : {$totalSalary}" . "<br />";
-echo "Student's scholarship : {$totalScholarship}" . "<br />";
+echo "Salary of all employees : {$totalSalary}" . "<br />";
+echo "Scholarship of all students : {$totalScholarship}" . "<br />";
 
 echo "<hr />";
 echo "<pre>",
 "
-    12.	Зробіть клас User з громадськими властивостями name і surname.
-    13.	Зробіть клас Employee, який успадковуватиметься від класу User і додаватиме властивість salary.
+    12.	Зробіть клас User12 з громадськими властивостями name і surname.
+    13.	Зробіть клас Employee13, який успадковуватиметься від класу User12 і додаватиме властивість salary.
     14.	Зробіть клас City з публічними властивостями name та population.
-    15.	Створіть 3 об'єкти класу User, 3 об'єкти класу Employee, 3 об'єкти класу City, і довільно запишіть їх у масив $ arr.
+    15.	Створіть 3 об'єкти класу User12, 3 об'єкти класу Employee13, 3 об'єкти класу City, і довільно запишіть їх у масив $ arr.
     16.	Переберіть циклом масив $ arr та виведіть на екран стовпець властивостей name тих об'єктів, 
-    які належать класу User або нащадку цього класу.
+    які належать класу User12 або нащадку цього класу.
     17.	Переберіть циклом масив $ arr і виведіть на екран стовпець властивостей name тих об'єктів, 
-    які не належать до класу User або нащадка цього класу.
+    які не належать до класу User12 або нащадка цього класу.
     18.	Переберіть циклом масив $ arr і виведіть на екран стовпець властивостей name тих об'єктів, 
-    які належать саме класу User, тобто не класу City і класу Employee.
+    які належать саме класу User12, тобто не класу City і класу Employee13.
 ",
 "</pre>";
 
-//create an instance of the class User
+//create an instance of the class User12
 $user1 = new User12("Karl", "Dor");
 $user2 = new User12("Ignat", "Pat");
 $user3 = new User12("Vlad", "Ram");
-//create an instance of the class Employee
+//create an instance of the class Employee13
 $employee1 = new Employee13("Stepan", "Lee", 2500);
 $employee2 = new Employee13("Roman", "Cos", 2800);
 $employee3 = new Employee13("Potap", "Bap", 2700);
@@ -227,7 +227,7 @@ $city2 = new City("Paris", 11100000);
 $city3 = new City("Berlin", 3570000);
 $arr = [$user1, $user2, $user3, $employee1, $employee2, $employee3, $city1, $city2, $city3];
 
-echo "Values of the name properties of objects of the User class and its descendants : " . "<br />";
+echo "Values of the Name properties of objects of the User class and its descendants : " . "<br />";
 foreach ($arr as $item) {
     if ($item instanceof User12) {
         echo $item->name . "<br />";
@@ -243,7 +243,7 @@ foreach ($arr as $item) {
 }
 echo "<br />";
 
-echo "Values of properties of the name of objects of the User class only : " . "<br />";
+echo "Values of properties of the Name of objects of the User class only : " . "<br />";
 foreach ($arr as $item) {
     if ((!$item instanceof Employee13) && (!$item instanceof City)) {
         echo $item->name . "<br />";
@@ -254,16 +254,16 @@ echo "<hr />";
 
 echo "<pre>",
 "
-    19.	Скопіюйте мій код класів Employee та Student і самостійно не підглядаючи у мій код реалізуйте такий самий клас UsersCollection.
+    19.	Скопіюйте мій код класів Employee19 та Student19 і самостійно не підглядаючи у мій код реалізуйте такий самий клас UsersCollection.
 ",
 "</pre>";
 
-//create an instance of the class Employee
+//create an instance of the class Employee19
 $employee1 = new Employee19("Mark", 1700);
 echo "employee1 - name : " . $employee1->getName() . "  salary : " . $employee1->getSalary() . "<br />";
 $employee2 = new Employee19("Otto", 2300);
 echo "employee2 - name : " . $employee2->getName() . "  salary : " . $employee2->getSalary() . "<br />";
-//create an instance of the class Student
+//create an instance of the class Student19
 $student1 = new  Student19("Vitaly", 400);
 echo "student1 - name : " . $student1->getName() . "  scholarship : " . $student1->getScholarship() . "<br />";
 $student2 = new Student19("Arnold", 500);
